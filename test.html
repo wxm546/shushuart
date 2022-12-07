@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js" integrity="sha512-iO07sRG5JOTsN7ndYtu10PsT8Cj1rFyZmIfgtYp5JogZCl7KgSMGcyuMbwVxCJT4oRY5ulCZMEaMdI1Y1HDwbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="./source/jquery-3.6.1.slim.min.js"></script>
+		<style type="text/css" media="screen, print">
+			@font-face {
+				font-family: "得意小黑";
+				src: url("./source/font/smiley-sans/SmileySans-Oblique.otf"), url("./source/font/smiley-sans/SmileySans-Oblique.ttf"), url("./source/font/smiley-sans/SmileySans-Oblique.woff"), url("./source/font/smiley-sans/SmileySans-Oblique.woff2");
+			}
+		</style>
+		<title>猪猪🐷</title>
+	</head>
+	<body>
+		<!-- 遮罩层 -->
+		<!-- <div class="modal">
+			<div class="modal-content">lorem 乱数假文，在网页的开发中，很多文本标签中的内容其实是无所谓的，到了后面会被替换成动态页面，但是开发时，还是要写啊，用乱数假文就好了，自动生成内容，长度不一的东东</div>
+		</div> -->
+		<!-- <div id="modal-container">
+			<div class="modal-background">
+			  <div class="modal">
+				<h2>I'm a Modal</h2>
+				<p>Hear me roar.</p>
+				<svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+										  <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+									  </svg>
+			  </div>
+			</div>
+		  </div> -->
+
+		<header class="topbanner">
+			<div class="topleft">
+				<h1>🌱shushu</h1>
+				<p>studio in YangZhou</p>
+			</div>
+		</header>
+
+		<div class="bodytop"><p>我的绘画作品🎨</p></div>
+		<button onclick="woaini1()">我爱你1</button>
+		<button onclick="woaini2()">我爱你2</button>
+		<button class="testbutton">testbutton</button>
+		<div class="body">
+			<div class="img-item">
+				<img class="img-image" src="/1_20221201.jpg" alt="20221201" />
+				<button class="button" id="one">button-one</button>
+			</div>
+			<div class="img-item">
+				<img class="img-image" src="/2_20221201.jpg" alt="20221201" />
+				<button class="button" id="two">button-two</button>
+			</div>
+			<div class="img-item">
+				<img class="img-image" src="/3.jpg" alt="3" />
+				<button class="button" id="three">button-three</button>
+			</div>
+			<div class="img-item">
+				<img class="img-image" src="/4_20220926.jpg" alt="20220926" />
+				<button class="button" id="four">button-four</button>
+			</div>
+			<div class="img-item">
+				<img class="img-image" src="/5_20220923.jpg" alt="20220923" />
+				<button class="button" id="five">button-five</button>
+			</div>
+			<div class="img-item">
+				<img class="img-image" src="/6_20220923.jpg" alt="20220923" />
+				<button class="button" id="six">button-six</button>
+			</div>
+		</div>
+
+		<footer class="bottombanner">我是猪</footer>
+	</body>
+	<script type="text/javascript">
+		let a = 1;
+		let b = 2;
+		let c = 3;
+
+		$(document).ready(function () {
+			// $(".img-item").click(function () {
+			// 	$(this).toggleClass("img-item-active");
+			// });
+			// $(".bodytop").pjax("bodytop.html");
+
+			$(".testbutton").on("click", function clic(e) {
+				$(".bodytop").html("<h1>舒舒是mnls</h1>");
+			});
+			$(".mnls").on("click", function clic(e) {
+				$(".bodytop").html("<h1>舒舒是mnls</h1>");
+			});
+			$(".bodyright").click(function clic(e) {
+				$(".bodytop").html("<h1>舒舒是mnls</h1>");
+			});
+			//点击图片预览
+			$(".button").click(function () {
+				var buttonId = $(this).attr("id");
+				$("#modal-container").removeAttr("class").addClass(buttonId);
+				$("body").addClass("modal-active");
+			});
+			$("#modal-container").click(function () {
+				$(this).addClass("out");
+				$("body").removeClass("modal-active");
+			});
+
+		});
+		function woaini1() {
+			$(".bodytop").html("<h1>舒舒</h1>");
+		}
+		function woaini2() {
+			$(".bodytop").html("<h1>我爱你</h1>");
+		}
+	</script>
+	<style>
+		body {
+			background-image: url("background2.webp");
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			min-height: 100vh;
+		}
+		.modal {
+			z-index: 1;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		.modal-content {
+			width: 300px;
+			height: 300px;
+			background-color: #fff;
+			position: absolute;
+		}
+
+		.topbanner {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 120px;
+			/* background-color: #f5f5f5; */
+			font-family: "得意小黑", Courier, monospace;
+		}
+		.topright {
+			margin: 10px;
+		}
+
+		.bodytop {
+			/* http://c.biancheng.net/css3/font.html */
+			/* https://www.w3school.com.cn/cssref/pr_background-image.asp */
+			font-family: "得意小黑";
+			font-size: 25px;
+			width: 100vw;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.body {
+			display: flex;
+			flex-wrap: wrap;
+			/* Compensate for excess margin on outer gallery flex items */
+			margin: 1rem 1rem;
+		}
+		.img-item {
+			flex: 1 0 22rem;
+			margin: 1rem;
+			box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+			overflow: hidden;
+		}
+		.img-image {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 400ms ease-out;
+		}
+		.img-image:hover {
+			transform: scale(1.15);
+		}
+		.bottombanner {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 120px;
+			/* background-color: #f5f5f5; */
+		}
+		/* *{
+			border: 1px solid #000;
+		} */
+	</style>
+</html>
