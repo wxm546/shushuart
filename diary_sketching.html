@@ -4,6 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js" integrity="sha512-iO07sRG5JOTsN7ndYtu10PsT8Cj1rFyZmIfgtYp5JogZCl7KgSMGcyuMbwVxCJT4oRY5ulCZMEaMdI1Y1HDwbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script type="text/javascript" src="./index.js"></script>
+		
+		<link  href="/path/to/jquery.fancybox.min.css" rel="stylesheet">
+	<script src="/path/to/jquery.fancybox.min.js"></script>
 		<link rel="stylesheet" href="./index.css" />
 		<title>diary sketching</title>
 	</head>
@@ -15,7 +21,7 @@
 				<h3>studio in YangZhou</h3>
 			</div>
 			<div class="header-block"></div>
-			<img class="header-homebtn" src="./source/pic/home.gif" alt="home" style="width: 90px; height: 110px" />
+			<a href="./index.html"><img class="header-homebtn" src="./source/pic/home.gif" alt="home" style="width: 90px; height: 110px" /></a>
 		</div>
 		<!-- 内容栏 -->
 		<main>
@@ -23,7 +29,42 @@
 				<a class="back-btn-home" href="./index.html"><h3>home</h3></a>
 			</div>
 			<div class="main-title"><h1>diary sketching</h1></div>
-			
+			<!-- TODO modal -->
+			<div id="modal-container">
+				<div class="modal-background">
+					<div class="modal">
+						<div class="modal-img"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- MARK gallary -->
+			<div class="main-gallary">
+				<!--图片展示-->
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/1_20221201.jpg" alt="1_20221201.jpg" /></div>
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/2_20221201.jpg" alt="2_20221201.jpg" /></div>
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/3.jpg" alt="3.jpg" /></div>
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/4_20220926.jpg" alt="4_20220926.jpg" /></div>
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/5_20220923.jpg" alt="5_20220923.jpg" /></div>
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/6_20220923.jpg" alt="6_20220923.jpg" /></div>
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/7_20221205.jpg" alt="7_20221205.jpg" /></div>
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/8_20221205.jpg" alt="8_20221205.jpg" /></div>
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/9_20221203.jpg" alt="9_20221203.jpg" /></div>
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/10_20221205.jpg" alt="10_20221205.jpg" /></div>
+				<div id="one" class="gallary-item button"><img class="gallary-img" src="./source/pic/diary_sketching/min50/11_20221202.jpg" alt="11_20221202.jpg" /></div>
+			</div>
 		</main>
+		<!-- 底部 -->
+		<footer>
+			<!-- <a class="link-frend" href="mailto:shushu0327@outlook.com">shushu0327@outlook.com</a>
+			<contact>
+				<a class="link-frend" href="">weibo</a>
+				<a class="link-frend" href="">bilibili</a>
+				<a class="link-frend" href="">抖音</a>
+				<a class="link-frend" href="https://wxm546.github.io/">友情链接</a>
+			</contact> -->
+			<p>© 2022 shushu</p>
+		</footer>
 	</body>
 </html>
